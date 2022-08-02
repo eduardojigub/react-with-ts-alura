@@ -1,4 +1,5 @@
 import React from "react";
+import Item from "./Item/index";
 import "./style.scss";
 
 const List = () => {
@@ -21,10 +22,7 @@ const List = () => {
       <h2>Tasks of the day</h2>
       <ul>
         {tasks.map((item, index) => (
-          <li key={index} className="item">
-            <h3>{item.task}</h3>
-            <span>{item.time}</span>
-          </li>
+          <Item key={index} task={item.task} time={item.time} />
         ))}
       </ul>
     </aside>
