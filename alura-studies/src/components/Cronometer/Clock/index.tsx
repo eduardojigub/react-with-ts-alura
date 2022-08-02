@@ -1,6 +1,10 @@
 import "./style.scss";
 
-const Clock = () => {
+interface Props {
+  time: number | undefined;
+}
+
+const Clock = ({ time }: Props) => {
   return (
     <>
       <span className="clockNumber ">0</span>

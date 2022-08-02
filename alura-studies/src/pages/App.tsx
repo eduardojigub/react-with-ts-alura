@@ -23,7 +23,7 @@ function App() {
     <div className="AppStyle">
       <Form setTasks={setTasks} />
       <List tasks={tasks} selectTask={selectTask} />
-      <Cronometer />
+      <Cronometer selected={selected} />
     </div>
   );
 }
