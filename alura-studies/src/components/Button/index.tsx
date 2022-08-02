@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
 class Button extends React.Component {
-    render(): React.ReactNode {
-        return (
-            <>
-            <button>Click Here</button>
-            </>
-        )
-    }
+  render(): React.ReactNode {
+    return (
+      <>
+        <button>Click Here</button>
+      </>
+    );
+  }
 }
 
 export default Button;
