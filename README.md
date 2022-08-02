@@ -8,4 +8,4 @@ My certificate can be checked on: https://cursos.alura.com.br/certificate/452e4e
 
 <p> You can check out the running application on https://fluttering-ghost.surge.sh/ </p>
 
-<img src="https://i.postimg.cc/W3LM82DQ/123.png" alt="Application" width="800" height="600">
+<img src="https://i.postimg.cc/W3LM82DQ/123.png" alt="Application" width="900" height="600">
