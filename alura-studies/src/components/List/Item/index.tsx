@@ -1,9 +1,24 @@
 import { ITask } from "../../../types/ITask";
 import "./style.scss";
 
-const Item = ({ task, time, selected, completed, id }: ITask) => {
+interface Props extends ITask {
+  selectTask: (selectedTask: ITask) => void;
+}
+
+const Item = ({ task, time, selected, completed, id, selectTask }: Props) => {
   return (
-    <li className="item">
+    <li
+      className={`"item" ${selected ? "itemSelected" : ""}`}
+      onClick={() =>
+        selectTask({
+          task,
+          time,
+          selected,
+          completed,
+          id,
+        })
+      }
+    >
       <h3>{task}</h3>
       <span>{time}</span>
     </li>
