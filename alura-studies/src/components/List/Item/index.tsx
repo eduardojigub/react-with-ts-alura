@@ -1,8 +1,7 @@
+import { ITask } from "../../../types/ITask";
 import "./style.scss";
 
-const Item = (props: { task: string; time: string }) => {
-  const { task, time } = props;
-
+const Item = ({ task, time, selected, completed, id }: ITask) => {
   return (
     <li className="item">
       <h3>{task}</h3>
