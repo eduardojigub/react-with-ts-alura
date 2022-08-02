@@ -17,13 +17,22 @@ const Cronometer = ({ selected }: Props) => {
       setTime(timeToSeconds(selected?.time));
     }
   }, [selected]);
+
+  function countdown(counter: number = 0) {
+    setTimeout(() => {
+      if (counter > 0) {
+        setTime(counter - 1);
+        return countdown(counter - 1);
+      }
+    }, 1000);
+  }
   return (
     <div className="cronometer">
       <p className="title">Pick a card and start the counter!</p>
       <div className="relogioWrapper">
         <Clock time={time} />
       </div>
-      <Button>Start!</Button>
+      <Button onClick={() => countdown(time)}>Start!</Button>
     </div>
   );
 };
